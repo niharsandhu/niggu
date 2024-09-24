@@ -19,7 +19,7 @@ const getRandomColor = () => colorOptions[Math.floor(Math.random() * colorOption
 
 const Product = ({ id, title, text, rating, price, btn }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+ 
   const { gradient, shadow } = getRandomColor();
 
   const onAddToCart = (e) => {

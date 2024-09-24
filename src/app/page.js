@@ -1,6 +1,8 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
+import { Provider } from 'react-redux'; // Import Provider
+import Store from '@/components/niggu/Store'; // Adjust the path accordingly
 import { Highlights } from '@/components/main/Highlight';
 import { Sales } from '@/components/main/OurProducts';
 import { Hero } from '@/components/head/Hero';
@@ -10,7 +12,7 @@ import { heroapi, high, sneaker, footerAPI, frames, Electronics, camera, motors,
 import Modal from '@/components/main/Modal';
 import Psales from '@/components/main/PopularSales';
 
-export default function App  () {
+export default function App() {
   const [selectedProductId, setSelectedProductId] = useState(null);
 
   const handleProductClick = (productId) => {
@@ -21,24 +23,26 @@ export default function App  () {
     setSelectedProductId(null);
   };
 
-  const categories = [Electronics, frames,camera,motors,accessories,Propellers,battery,radio];
+  const categories = [Electronics, frames, camera, motors, accessories, Propellers, battery, radio];
 
   return (
-    <>
-      <Toaster position="top-center" reverseOrder={false} />
-      <Navbar />
-      <main>
-        <Hero heroapi={heroapi} />
-        <Psales endpoint={popularsales}/>
-        <Highlights endpoint={high} ifExists onProductClick={handleProductClick} />
-        <Sales categories={categories} numberOfItems={3} ifExists onProductClick={handleProductClick} />
-        <Highlights endpoint={sneaker} onProductClick={handleProductClick} />
-        <br />
-      </main>
-      <Footer footerAPI={footerAPI} />
-      {selectedProductId && (
-        <Modal productId={selectedProductId} onClose={handleCloseModal} />
-      )}
-    </>
+    <Provider store={Store}> {/* Wrap your app in the Provider */}
+      <>
+        <Toaster position="top-center" reverseOrder={false} />
+        <Navbar />
+        <main>
+          <Hero heroapi={heroapi} />
+          <Psales endpoint={popularsales} />
+          <Highlights endpoint={high} ifExists onProductClick={handleProductClick} />
+          <Sales categories={categories} numberOfItems={3} ifExists onProductClick={handleProductClick} />
+          <Highlights endpoint={sneaker} onProductClick={handleProductClick} />
+          <br />
+        </main>
+        <Footer footerAPI={footerAPI} />
+        {selectedProductId && (
+          <Modal productId={selectedProductId} onClose={handleCloseModal} />
+        )}
+      </>
+    </Provider>
   );
-};
+}
