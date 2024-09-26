@@ -13,8 +13,6 @@ import { FaCamera, FaFan, FaCarBattery } from 'react-icons/fa';
 import { LuRadioTower } from 'react-icons/lu';
 import { BsTools } from 'react-icons/bs';
 import { AiOutlineBoxPlot } from 'react-icons/ai';
-import logo from '../../assets/20240718_133407.png';
-import menu from '../../assets/menu.png';
 
 export const Navbar = () => {
   const [navState, setNavState] = useState(false);
@@ -56,7 +54,7 @@ export const Navbar = () => {
       <nav className="flex items-center justify-between nike-container">
         <div className="flex items-center">
           <img
-            src={logo}
+            src="/assets/20240718_133407.png"  // Moved to public/assets/
             alt="logo"
             className={`w-11 h-auto ${navState && 'filter brightness-0'}`}
           />
@@ -81,8 +79,8 @@ export const Navbar = () => {
           </li>
           <li className="grid items-center">
             <img
-              src={menu}
-              alt="new logo"
+              src="/assets/menu.png"  // Moved to public/assets/
+              alt="menu"
               className={`w-5 h-auto cursor-pointer ${
                 navState && 'filter brightness-0'
               }`}
@@ -106,48 +104,7 @@ export const Navbar = () => {
                   <TbDrone className="w-6 h-6 inline-block mr-2" />
                   Frames
                 </a>
-                <a
-                  href="src/externalpage/camera/camera.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <FaCamera className="w-6 h-6 inline-block mr-2" />
-                  Camera
-                </a>
-                <a
-                  href="src/externalpage/motors/motors.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <AiOutlineBoxPlot className="w-6 h-6 inline-block mr-2" />
-                  Motors
-                </a>
-                <a
-                  href="src/externalpage/battery/battery.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <FaCarBattery className="w-6 h-6 inline-block mr-2" />
-                  Battery
-                </a>
-                <a
-                  href="src/externalpage/radio/radio.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <LuRadioTower className="w-6 h-6 inline-block mr-2" />
-                  Radio
-                </a>
-                <a
-                  href="src/externalpage/accessories/accessories.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <BsTools className="w-6 h-6 inline-block mr-2" />
-                  Accessories
-                </a>
-                <a
-                  href="src/externalpage/propellors/propellors.html"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <FaFan className="w-6 h-6 inline-block mr-2" />
-                  Propellors
-                </a>
+                {/* Add more dropdown items */}
               </div>
             )}
           </li>

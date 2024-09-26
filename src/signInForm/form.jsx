@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import './form.css';
 import * as Components from './compo';
 
 function Sign() {
@@ -26,6 +24,7 @@ function Sign() {
             setResponseMessage(result.message || 'Success');
         } catch (error) {
             setResponseMessage('An error occurred');
+            
         }
     };
 
