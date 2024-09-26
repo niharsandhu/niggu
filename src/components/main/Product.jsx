@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useDispatch } from "react-redux";
 import { StarIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { setAddItemToCart, setOpenCart } from "@/components/niggu/CartSlice";
@@ -17,7 +18,7 @@ const colorOptions = [
 
 const getRandomColor = () => colorOptions[Math.floor(Math.random() * colorOptions.length)];
 
-const Product = ({ id, title, text, rating, price, btn }) => {
+const Product = ({ id, title, text, rating, price, btn, img }) => {
   const dispatch = useDispatch();
  
   const { gradient, shadow } = getRandomColor();
@@ -76,8 +77,10 @@ const Product = ({ id, title, text, rating, price, btn }) => {
       </div>
 
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex justify-center w-full">
-          <img
-            src={`path_to_your_images/${id}.png`} // Replace with the correct image source
+          <Image
+            src={img} // Replace with the correct image source
+            width={50}
+            height={50}
             alt={`img/item-img/${id}`}
             className="w-3/4 h-auto object-contain"
           />
