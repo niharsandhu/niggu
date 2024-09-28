@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'; // Ensure correct casing
-import ReactDOM from 'r../../../components/main/OurProducts
-import { Sales } fro../../../components/cart/Cart.jsxoducts';
-import  Cart  from '../.../../../components/foot/Footer
-import { Footer } from '../../components/../../../data/data
+import { Sales } from '../../components/main/OurProducts';
+import  Cart  from '../../components/cart/Cart.jsx';
+import { Footer } from '../../components/foot/Footer';
 import { footerAPI,  accessories } from '../../data/data';
 import { Provider } from 'react-redux'; 
 import Store from '@/components/niggu/Store';

@@ -1,6 +1,4 @@
-// components/cart/Cart.jsx
-'use client'; // This is for Next.js client component
-
+'use client'
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,7 +8,8 @@ import {
   selectTotalQTY,
   setClearCartItems,
   setCloseCart,
-  setGetTotals
+  setGetTotals,
+  setCartFromLocalStorage
 } from "@/components/niggu/CartSlice"; // Adjust the path according to your structure
 import CartCount from "./CartCount";
 import CartEmpty from "./CartEmpty";
@@ -23,9 +22,22 @@ const Cart = () => {
   const totalAmount = useSelector(selectTotalAmount);
   const totalQTY = useSelector(selectTotalQTY);
   
+  // Load cart items from localStorage when the component mounts
   useEffect(() => {
-    dispatch(setGetTotals());
-  }, [cartItems, dispatch]);
+    if (typeof window !== 'undefined') {
+      const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+      if (storedCartItems) {
+        dispatch(setCartFromLocalStorage(storedCartItems));
+      }
+    }
+  }, [dispatch]);
+  
+  // Update localStorage whenever the cartItems change
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+  }, [cartItems]);
   
   const onCartToggle = () => {
     dispatch(setCloseCart({ cartState: false }));
@@ -33,6 +45,9 @@ const Cart = () => {
 
   const onClearCartItems = () => {
     dispatch(setClearCartItems());
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('cartItems');
+    }
   };
   
   return (
@@ -67,4 +82,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
 
