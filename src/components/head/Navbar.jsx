@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTotalQTY, setOpenCart } from '@/components/niggu/CartSlice';
+import Link from 'next/link';
 import {
   HeartIcon,
   MagnifyingGlassIcon,
@@ -138,13 +139,13 @@ export const Navbar = () => {
             </button>
           </li>
           <li className="grid items-center">
-            <a href="src/signInForm/form.html" target="_blank">
+          <Link href="/sign">
               <UserCircleIcon
                 className={`icon-style w-5 h-auto ${
                   navState && 'text-slate-900 transition-all duration-300'
                 }`}
               />
-            </a>
+              </Link>
           </li>
         </ul>
       </nav>

@@ -12,6 +12,7 @@ import { heroapi, high, sneaker, footerAPI, frames, Electronics, camera, motors,
 import Modal from '@/components/main/Modal';
 import Psales from '@/components/main/PopularSales';
 
+
 export default function App() {
   const [selectedProductId, setSelectedProductId] = useState(null);
 
