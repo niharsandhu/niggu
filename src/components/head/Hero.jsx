@@ -48,7 +48,7 @@ export const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, vi
         <div className='flex items-center mt-5'>
           <div ref={tiltRef} className='product w-auto h-[65vh] lg:h-[55vh] md:h-[51vh] sm:h-[41vh] xsm:h-[39vh] transitions-theme -rotate-[0deg] hover:rotate-20 cursor-pointer object-fill -mt-8 card'>
             <Image
-              src='/assets/drone1.png' // Use a string for the relative path from the public folder
+              src='https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/drone1.png' // Use a string for the relative path from the public folder
               alt='hero-img'
               width={500} // You can adjust the width and height as needed
               height={500}

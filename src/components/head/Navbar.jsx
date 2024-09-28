@@ -55,7 +55,7 @@ export const Navbar = () => {
       <nav className="flex items-center justify-between nike-container">
         <div className="flex items-center">
           <img
-            src="/assets/20240718_133407.png"  // Moved to public/assets/
+            src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/20240718_133407.png"  // Moved to public/assets/
             alt="logo"
             className={`w-11 h-auto ${navState && 'filter brightness-0'}`}
           />
@@ -80,7 +80,7 @@ export const Navbar = () => {
           </li>
           <li className="grid items-center">
             <img
-              src="/assets/menu.png"  // Moved to public/assets/
+              src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/menu.png"  // Moved to public/assets/
               alt="menu"
               className={`w-5 h-auto cursor-pointer ${
                 navState && 'filter brightness-0'
