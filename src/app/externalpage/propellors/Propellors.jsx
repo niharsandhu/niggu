@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Sales } from '../../components/main/OurProducts';
-import Cart from '../../components/cart/Cart.jsx';
-import { Footer } from '../../components/foot/Footer';
+import { Sales } from '../../../components/main/OurProducts';
+import Cart from '../../../components/cart/Cart.jsx';
+import { Footer } from '../../../components/foot/Footer';
 import '../../index.css';
 import { Provider } from "react-redux";
 import Store from '../../app/Store';
 import { Toaster } from 'react-hot-toast';
-import { footerAPI, radio } from '../../data/data';
+import { footerAPI,Propellers } from '../../../data/data';
 
 const App = () => {
   return (
     <>
       <Cart />
       <main>
-        <Sales endpoint={radio} />
+        <Sales endpoint={Propellers} />
       </main>
       <br /><br />
       <Footer footerAPI={footerAPI} />

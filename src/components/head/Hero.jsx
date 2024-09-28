@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import SocialLink from './SocialLink';
-
-export const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } }) => {
+import Clips from './Clips';
+export const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks ,videos} }) => {
   const tiltRef = useRef(null);
 
   useEffect(() => {
@@ -35,6 +35,12 @@ export const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, vi
           <button type='button' className='button-theme bg-slate-200 shadow-slate-200 rounded-xl my-5'>
             {btntext}
           </button>
+            {/* Video Clips */}
+            <div className='grid items-center gap-5 md:gap-3 absolute top-[33vh] lg:top-[27vh] left-[11%] xl:left-0 w-auto h-auto'>
+            {videos?.map((val, i) => (
+              <Clips key={i} imgsrc={val.imgsrc} clip={val.clip} />
+            ))}
+          </div>
 
           {/* Social Links */}
           <div className='grid items-center absolute top-[33vh] lg:top-[27vh] right-0 gap-3'>
@@ -48,18 +54,18 @@ export const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, vi
         <div className='flex items-center mt-5'>
           <div ref={tiltRef} className='product w-auto h-[65vh] lg:h-[55vh] md:h-[51vh] sm:h-[41vh] xsm:h-[39vh] transitions-theme -rotate-[0deg] hover:rotate-20 cursor-pointer object-fill -mt-8 card'>
             <Image
-              src='https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/drone1.png' // Use a string for the relative path from the public folder
+              src='https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/drone1.png'
               alt='hero-img'
-              width={500} // You can adjust the width and height as needed
+              width={500}
               height={500}
-              objectFit='cover' // Fit the image appropriately
-              priority={true} // Optional: Load the image with priority
+              objectFit='cover'
+              priority={true}
             />
+            <div className="glare"></div> {/* Add glare effect */}
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 

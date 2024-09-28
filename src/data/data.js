@@ -1,61 +1,21 @@
 import heroimg from "../assets/drone1.png";
 
-import hightlightimg from "../assets/drone1.png";
-import sneakershoe from "../assets/drone5.png";
-
-
-import psale1 from "../assets/Afterburner-5-M1.png";
-import psaleA from "../assets/meteor2.webp";
-import psaleB from "../assets/meteor85.webp";
-import psaleC from "../assets/metar.webp";
-import psale2 from "../assets/file (1).png";
-import psale3 from "../assets/CineLog.png";
-
-import product1 from "../assets/e1.png";
-import product1a from"../assets/e1a.webp";
-import product1b from"../assets/e1b.webp";
-import product1c from"../assets/e1c.webp";
-import product2 from "../assets/e2.png";
-import product3 from "../assets/e3.png";
-import product4 from "../assets/e4.png";
-import product5 from "../assets/e5.png";
-import product6 from "../assets/e6.png";
-import product7 from "../assets/e7.png";
-import product9 from "../assets/e8.png";
-
-
-import frame1 from "../assets/F1.png";
-import frame2 from "../assets/F2.png";
-import frame3 from "../assets/F3.png";
-import frame4 from "../assets/F4.png";
-import frame5 from "../assets/F5.png";
-import frame6 from "../assets/F6.png";
-import frame7 from "../assets/F7.png";
-import frame8 from "../assets/F8.png";
-
-
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
-import twitter from "../assets/twitter.svg";
-import youtube from "../assets/youtube.svg";
-import messenger from "../assets/messenger.svg";
-
 const heroapi = {
   title: "Soar High with Our",
   subtitle: "Cutting-Edge Drones!",
   img: heroimg,
   btntext: "Explore Product",
-  // videos: [
-  //   { imgsrc: vcover1, clip: clip },
-  //   { imgsrc: vcover2, clip: clip },
-  //   { imgsrc: vcover3, clip: clip },
-  // ],
+  videos: [
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover1.png", clip:"https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4" },
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover2.png", clip: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4"  },
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover3.png", clip: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4"  },
+  ],
   sociallinks: [
-    { icon: facebook },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/facebook.svg' },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/messenger.svg' },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/instagram.svg' },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/twitter.svg' },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/youtube.svg' },
   ],
 };
 
@@ -68,15 +28,11 @@ const popularsales = {
       text: "Brushless Whoop Quadcopter",
       rating: "4.9",
       btn: "Buy Now",
-      img: psale2,
       price: "15999",
       color: "bg-gradient-to-r from-blue-400 to-blue-700",
       shadow: "shadow-blue-500/30",
       specifications: "Weight: 43.85g (without battery) \n FC: F4 1S 12A FC \n Motors: 1103 11000KV with connector \nProps: Gemfan 2015 2-Blade Propellers \nCamera*: Caddx Ant Camera or RunCam Nano4 \nCamera Adjustable Angle: 0-45° \nFrame: Meteor85 Brushless Whoop Frame \n Canopy: Micro Canopy for HD Camera \nReceiver Option: ELRS 2.4G PI Frsky \nVTX: M03 25-350mW VTX \nBattery*: LAVA 2S 450mAh 75C Battery \nFlight time: 7 mins",
       features: "This is the new Meteor85 Analog VTX version with a new design frame that features a low profile of battery slot height, perfect for a 2S 450mAh battery, and comes with a new micro canopy for good airflow to decrease heat, and a new F4 1S 12A flight controller, supporting SPI ELRS 2.4G, and SPI Frsky. The SPI ELRS 2.4G and SPI Frsky versions also support external receiver and so can be used as PNP. The propulsion system, upgraded by adopting GF 2015 2-blade props with 1103 11000KV motors becomes more powerful and maneuverable for freestyle tricks. For pilots who want to fly a 2S HD whoop drone, Meteor85 HD digital VTX is a good choice.",
-      additionalImages: [
-        psaleA,psaleB,psaleC
-      ],
       reviews: " "
     },
     {
@@ -85,7 +41,7 @@ const popularsales = {
       text: "HD 2RAW",
       rating: "4.5",
       btn: "Buy Now",
-      img: psale1,
+
       price: "79999",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
@@ -97,7 +53,7 @@ const popularsales = {
       text: "CineWhoop FPV Cinematic Drone",
       rating: "5+",
       btn: "Buy Now",
-      img: psale3,
+
       price: "35999",
       color: "from-violet-500 to-indigo-500",
       shadow: "shadow-lg shadow-violet-500",
@@ -108,7 +64,7 @@ const popularsales = {
       text: "HD 2RAW",
       rating: "4.5",
       btn: "Buy Now",
-      img: psale1,
+
       price: "79999",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
@@ -123,7 +79,8 @@ const high = {
   text: "Our mission is to revolutionize the skies. We take action by fostering innovation, protecting our environment, and expanding access to aerial technology.",
   btn: "Explore More",
   url: "https://www.nike.com/launch/t/nocta-hot-step-black-gold",
-  img: hightlightimg,
+  img:"https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/drone1.png"
+
 }; 
 
 const sneaker = {
@@ -132,7 +89,7 @@ const sneaker = {
   text: "We are committed to pushing the boundaries of what drones can achieve, ensuring that cutting-edge technology is available for every adventure.",
   btn: "Explore More",
   url: "https://sneakernews.com/2022/03/21/nike-lebron-2-retro-white-midnight-navy-varsity-crimson-dr0826-100/",
-  img: sneakershoe,
+ img:"https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/drone1.png"
 };
 
 const Electronics = {
@@ -144,13 +101,13 @@ const Electronics = {
       text: "GPS Module",
       rating: "5+",
       btn: "Buy Now",
-      img: product7,
+
       price: "1899",
       color: "from-sky-600 to-indigo-600",
       shadow: "shadow-lg shadow-blue-500",
       features: "The GEPRC GPS series product line has been fully upgraded. The GEP-M1025 series of GPS products based on u-blox M10050 chip and using 25*25mm antenna are now launched.The GEP-M1025 series GPS positioning module uses u-blox’s M10 chip solution and supports GPS+BDS+Galileo+QZSS+SBAS joint positioning, up to 32 satellites. 25*25mm ceramic antenna provides better reception capabilities. Built-in Flash chip and Farad capacitor can save configuration parameters and quickly hot start.Optional QMC5883L/IST8310 magnetometer and DPS310/MS5611 barometer. A variety of matching solutions provide accurate azimuth pointing and sensitive altitude change data. It can meet the needs of most FPV quadcopters , multi-rotor, fixed wing and other model products Note: The direction of the magnetometer in INAV should be set to QMC5883: CW 0° flip, IST8310: CW 90° flip. ",
       specifications:"u-blox M10 series chip \n GPS+BDS+Galileo+QZSS+SBAS joint positioning\nFast positioning speed,Up to 32 satellites\nStable connection quality\n25*25mm antenna size, better signal receiving performance\nBuilt-in Flash chip and Farad capacitor\nOnboard indicator light, easy to use\nOptional integrated magnetometer+barometer, more collocation scheme",
-      additionalImages:[product1a,product1b,product1c]
+    
     },
     
     {
@@ -159,13 +116,12 @@ const Electronics = {
       text: "V2 30X30 Flight Controller",
       rating: "5+",
       btn: "Buy Now",
-      img: product2,
+
       price: "4499",
       color: "from-green-500 to-emerald-500",
       shadow: "shadow-lg shadow-green-500",
       specifications: "Some specifications here...",
       features: "This is the new Meteor85 Analog VTX version with a new design frame that features a low profile of battery slot height, perfect for a 2S 450mAh battery, and comes with a new micro canopy for good airflow to decrease heat, and a new F4 1S 12A flight controller, supporting SPI ELRS 2.4G, and SPI Frsky. The SPI ELRS 2.4G and SPI Frsky versions also support external receiver and so can be used as PNP. The propulsion system, upgraded by adopting GF 2015 2-blade props with 1103 11000KV motors becomes more powerful and maneuverable for freestyle tricks. For pilots who want to fly a 2S HD whoop drone, Meteor85 HD digital VTX is a good choice.",
-      additionalImages: [psale2, psale2, psale2], // Example images
       reviews: "Some reviews here...",
     },
     {
@@ -174,7 +130,7 @@ const Electronics = {
       text: "ADS-B Carrier Board (IMU)",
       rating: "5+",
       btn: "Buy Now",
-      img: product3,
+
       price: "34999",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
@@ -185,7 +141,7 @@ const Electronics = {
       text: "HQ_36 Power Distribution",
       rating: "5+",
       btn: "Buy Now",
-      img: product4,
+
       price: "14499",
       color: "from-orange-500 to-amber-500",
       shadow: "shadow-lg shadow-orange-500",
@@ -196,7 +152,7 @@ const Electronics = {
       text: "Flight Controller X8 DJI",
       rating: "5+",
       btn: "Buy Now",
-      img: product5,
+
       price: "4499",
       color: "from-gray-900 to-yellow-500",
       shadow: "shadow-lg shadow-yellow-500",
@@ -207,7 +163,7 @@ const Electronics = {
       text: "with Compass",
       rating: "5+",
       btn: "Buy Now",
-      img: product6,
+
       price: "1499",
       color: "from-blue-500 to-cyan-500",
       shadow: "shadow-lg shadow-cyan-500",
@@ -218,7 +174,7 @@ const Electronics = {
       text: "FR 5-in-1 AIO Flight",
       rating: "5+",
       btn: "Buy Now",
-      img: product1,
+
       price: "6199",
       color: "from-yellow-500 to-yellow-500",
       shadow: "shadow-lg shadow-yellow-500",
@@ -229,7 +185,7 @@ const Electronics = {
       text: "",
       rating: "5+",
       btn: "Buy Now",
-      img: product9,
+
       price: "699",
       color: "from-[#936550] to-orange-900",
       shadow: "shadow-lg shadow-orange-800",
@@ -245,7 +201,6 @@ const frames= {
       text: "Frame Kit",
       rating: "5+",
       btn: "Buy Now",
-      img: frame1,
       price: "9499",
       color: "from-sky-600 to-indigo-600",
       shadow: "shadow-lg shadow-blue-500",
@@ -256,7 +211,7 @@ const frames= {
       text: "Whoop Frame",
       rating: "5+",
       btn: "Buy Now",
-      img: frame2,
+
       price: "2999",
       color: "from-green-500 to-emerald-500",
       shadow: "shadow-lg shadow-green-500",
@@ -267,7 +222,7 @@ const frames= {
       text: "Frame",
       rating: "5+",
       btn: "Buy Now",
-      img: frame3,
+
       price: "4299",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
@@ -278,7 +233,7 @@ const frames= {
       text: "Frame Kit",
       rating: "5+",
       btn: "Buy Now",
-      img: frame4,
+
       price: "1999",
       color: "from-orange-500 to-amber-500",
       shadow: "shadow-lg shadow-orange-500",
@@ -289,7 +244,7 @@ const frames= {
       text: "20 CL20 2″ Frame Kit",
       rating: "5+",
       btn: "Buy Now",
-      img: frame5,
+
       price: "3599",
       color: "from-gray-900 to-yellow-500",
       shadow: "shadow-lg shadow-yellow-500",
@@ -300,7 +255,7 @@ const frames= {
       text: "Replacement Duct –",
       rating: "5+",
       btn: "Buy Now",
-      img: frame6,
+
       price: "799",
       color: "from-blue-500 to-cyan-500",
       shadow: "shadow-lg shadow-cyan-500",
@@ -311,7 +266,7 @@ const frames= {
       text: "Frame Kit",
       rating: "5+",
       btn: "Buy Now",
-      img: frame7,
+
       price: "2699",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
@@ -322,7 +277,6 @@ const frames= {
       text: "CineWhoop Frame Kit",
       rating: "5+",
       btn: "Buy Now",
-      img: frame8,
       price: "5499",
       color: "from-sky-600 to-indigo-600",
       shadow: "shadow-lg shadow-blue-500",
@@ -388,7 +342,7 @@ const camera = {
       text: "Action Camera",
       rating: "5+",
       btn: "Buy Now",
-      img: frame6,
+
       price: "11499",
       color: "from-blue-500 to-cyan-500",
       shadow: "shadow-lg shadow-cyan-500",
@@ -409,7 +363,6 @@ const camera = {
       text: "Action Camera",
       rating: "5+",
       btn: "Buy Now",
-      img: frame8,
       price: "12499",
       color: "from-sky-600 to-indigo-600",
       shadow: "shadow-lg shadow-blue-500",

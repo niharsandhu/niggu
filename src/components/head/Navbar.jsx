@@ -55,7 +55,7 @@ export const Navbar = () => {
       <nav className="flex items-center justify-between nike-container">
         <div className="flex items-center">
           <img
-            src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/20240718_133407.png"  // Moved to public/assets/
+            src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/20240718_133407.png" // Moved to public/assets/
             alt="logo"
             className={`w-11 h-auto ${navState && 'filter brightness-0'}`}
           />
@@ -73,40 +73,54 @@ export const Navbar = () => {
                 id="search-button"
                 onClick={toggleSearch}
               >
-                <MagnifyingGlassIcon className={`search__icon ${navState && 'filter brightness-0'} `}/>
+                <MagnifyingGlassIcon className={`search__icon ${navState && 'filter brightness-0'} `} />
                 <span className="search__close">&times;</span>
               </button>
             </div>
           </li>
           <li className="grid items-center">
             <img
-              src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/menu.png"  // Moved to public/assets/
+              src="https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/menu.png" // Moved to public/assets/
               alt="menu"
-              className={`w-5 h-auto cursor-pointer ${
-                navState && 'filter brightness-0'
-              }`}
+              className={`w-5 h-auto cursor-pointer ${navState && 'filter brightness-0'}`}
               onClick={toggleDropdown}
             />
             {dropdownOpen && (
               <div className="absolute top-10 right-2 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-20 backdrop-blur-lg bg-opacity-0">
-                <a
-                  href="src/externalpage/electronics/electronics.html"
-                  target="_blank"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <HiChip className="w-6 h-6 inline-block mr-2" />
-                  Electronics
-                </a>
-                <a
-                  href="src/externalpage/frames/frames.html"
-                  target="_blank"
-                  className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black"
-                >
-                  <TbDrone className="w-6 h-6 inline-block mr-2" />
-                  Frames
-                </a>
-                {/* Add more dropdown items */}
-              </div>
+              <Link href="/Electronics" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <HiChip className="w-6 h-6 inline-block mr-2" />
+                Electronics
+              </Link>
+              <Link href="/Frames" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <TbDrone className="w-6 h-6 inline-block mr-2" />
+                Frames
+              </Link>
+              <Link href="/Camera" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <FaCamera className="w-6 h-6 inline-block mr-2" />
+                Camera
+              </Link>
+              <Link href="/Motors" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <AiOutlineBoxPlot className="w-6 h-6 inline-block mr-2" />
+                Motors
+              </Link>
+              <Link href="/Battery" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <FaCarBattery className="w-6 h-6 inline-block mr-2" />
+                Battery
+              </Link>
+              <Link href="/Radio" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <LuRadioTower className="w-6 h-6 inline-block mr-2" />
+                Radio
+              </Link>
+              <Link href="/Accessories" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <BsTools className="w-6 h-6 inline-block mr-2" />
+                Accessories
+              </Link>
+              <Link href="/Propellors" className="block px-4 py-2 text-slate-50 hover:bg-slate-50 hover:text-black">
+                <FaFan className="w-6 h-6 inline-block mr-2" />
+                Propellors
+              </Link>
+            </div>
+            
             )}
           </li>
           <li className="grid items-center">
@@ -139,13 +153,13 @@ export const Navbar = () => {
             </button>
           </li>
           <li className="grid items-center">
-          <Link href="/sign">
+            <Link href="/sign">
               <UserCircleIcon
                 className={`icon-style w-5 h-auto ${
                   navState && 'text-slate-900 transition-all duration-300'
                 }`}
               />
-              </Link>
+            </Link>
           </li>
         </ul>
       </nav>
