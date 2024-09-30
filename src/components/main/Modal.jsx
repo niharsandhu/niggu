@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { StarIcon } from "@heroicons/react/24/solid";
 
 // Styles for the modal
@@ -67,18 +67,16 @@ const modalStyles = {
   }
 };
 
-// ProductDescription component to display detailed product information
 const Modal = ({
   item, 
   onClose,
   title,
   price,
   text,
-  img,
+  img, // Using the img prop here
   specifications,
   features,
   includes,
-  onClick
 }) => {
   if (!item) return null;
 
@@ -99,7 +97,7 @@ const Modal = ({
           ×
         </button>
         <img
-          src={image || (item.images?.[0]?.full_image_url || 'placeholder.jpg')}
+          src={img || 'placeholder.jpg'}  // Use the img prop passed into the Modal
           alt={`img/item-img/${item.id}`}
           style={modalStyles.image}
         />
@@ -134,18 +132,6 @@ const Modal = ({
             </ul>
           </div>
           <div>
-            <h2 style={modalStyles.sectionTitle}>Additional Images</h2>
-            <div style={modalStyles.sectionContent}>
-              {img.length > 0 ? (
-                item.images.map((image, index) => (
-                  <img key={index} src={image.full_image_url} alt={`img/item-img/${item.id}-${index}`} className="w-[300px] h-auto object-contain mb-2" />
-                ))
-              ) : (
-                <p>No additional images available</p>
-              )}
-            </div>
-          </div>
-          <div>
             <h2 style={modalStyles.sectionTitle}>Included Items</h2>
             <ul style={modalStyles.sectionContent}>
               {includes?.length > 0
@@ -162,3 +148,4 @@ const Modal = ({
 };
 
 export default Modal;
+

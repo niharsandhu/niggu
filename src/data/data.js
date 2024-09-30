@@ -11,11 +11,11 @@ const heroapi = {
     { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover3.png", clip: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4"  },
   ],
   sociallinks: [
-    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/facebook.svg' },
-    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/messenger.svg' },
-    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/instagram.svg' },
-    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/twitter.svg' },
-    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/youtube.svg' },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/facebook.svg',href:"https://www.facebook.com"},
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/messenger.svg', href:"https://www.messenger.com/"},
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/instagram.svg', href:"https://www.instagram.com" },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/twitter.svg', href:"https://x.com/?lang=en" },
+    { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/youtube.svg', href:"https://www.youtube.com/" },
   ],
 };
 

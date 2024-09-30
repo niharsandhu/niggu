@@ -8,7 +8,7 @@ import axios from 'axios';
 const Psales = React.forwardRef(({ ifExists, endpoint: { title }, onProductClick }, ref) => {
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [itemData, setItemData] = useState([]); // an Empty array for the data.
+  const [itemData, setItemData] = useState([]); // An empty array for the data.
 
   const openModal = (id, e) => {
     if (e.target.closest('.cart-button') || e.target.closest('.buy-now-button')) {
@@ -25,6 +25,7 @@ const Psales = React.forwardRef(({ ifExists, endpoint: { title }, onProductClick
     setIsModalOpen(false);
     setSelectedProductId(null);
   };
+ 
 
   if (!ifExists) return null;
 
@@ -51,16 +52,21 @@ const Psales = React.forwardRef(({ ifExists, endpoint: { title }, onProductClick
   return (
     <div className='nike-container' ref={ref}>
       <Title title={title} />
-      <div className={`grid items-center justify-items-center gap-7 lg:gap-5 mt-6  mb-10 ${ifExists ? 'grid-cols-4 xl:grid-cols-4 sm:grid-cols-1' : 'grid-cols-4 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'}`}>
-        {itemData?.map((item, i) => (
-          <Product
-            key={item.id} // index number for unique identification
-            title={item.name} // name of the product
-            price={item.price} // price of the item
-            text={item.description} // description of the item
-            img={item.images[0]?.full_image_url} // Use the first image from the array
-            onClick={(e) => openModal(item.id, e)}
-          />
+      <div className={`grid items-center justify-items-center gap-7 lg:gap-5 mt-6 mb-10 ${ifExists ? 'grid-cols-4 xl:grid-cols-4 sm:grid-cols-1' : 'grid-cols-4 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'}`}>
+        {itemData?.map((item) => (
+          item.id ? ( // Check if item.id is defined
+            <Product
+              key={item.id} // Ensure the key is unique
+              id={item.id} // Pass the id to the Product component
+              title={item.name} // Name of the product
+              price={item.price} // Price of the item
+              text={item.description} // Description of the item
+              img={item.images[0]?.full_image_url} // Use the first image from the array
+              onClick={(e) => openModal(item.id, e)} // Handle modal open
+            />
+          ) : (
+            <p key={item.id}>Product ID is missing</p> // Display message if id is missing
+          )
         ))}
       </div>
       {isModalOpen && (
@@ -83,7 +89,7 @@ Psales.propTypes = {
 
 Psales.defaultProps = {
   ifExists: true,
-  onProductClick: () => { },
+  onProductClick: () => {},
 };
 
 export default Psales;

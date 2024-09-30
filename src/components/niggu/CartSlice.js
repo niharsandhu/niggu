@@ -51,3 +51,4 @@ export const selectCartState = (state) => state.cart.cartState;
 export const selectTotalAmount = (state) => state.cart.totalAmount;
 export const selectTotalQTY = (state) => state.cart.totalQTY;
 export default cartSlice.reducer;
+

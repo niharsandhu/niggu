@@ -45,7 +45,7 @@ export const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks ,videos}
           {/* Social Links */}
           <div className='grid items-center absolute top-[33vh] lg:top-[27vh] right-0 gap-3'>
             {sociallinks?.map((val, i) => (
-              <SocialLink key={i} icon={val.icon} />
+              <SocialLink key={i} icon={val.icon} href={val.href} />
             ))}
           </div>
         </div>
@@ -58,7 +58,7 @@ export const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks ,videos}
               alt='hero-img'
               width={500}
               height={500}
-              objectFit='cover'
+              style={{ objectFit: 'cover'}}
               priority={true}
             />
             <div className="glare"></div> {/* Add glare effect */}
