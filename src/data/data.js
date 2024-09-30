@@ -6,9 +6,9 @@ const heroapi = {
   img: heroimg,
   btntext: "Explore Product",
   videos: [
-    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover1.png", clip:"https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4" },
-    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover2.png", clip: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4"  },
-    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/vcover3.png", clip: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/video/clip.mp4"  },
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/metar.webp", clip:"" },
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/e1c.webp", clip: ""  },
+    { imgsrc: "https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/e1a.webp", clip: ""  },
   ],
   sociallinks: [
     { icon: 'https://hobbybucket.blr1.cdn.digitaloceanspaces.com/hobbybucket/frontend/assets/facebook.svg',href:"https://www.facebook.com"},
